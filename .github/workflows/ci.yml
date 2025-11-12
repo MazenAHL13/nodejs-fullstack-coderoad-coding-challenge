@@ -9,6 +9,9 @@ on:                     # Cuándo se ejecuta
 jobs:                   # Qué tareas ejecuta
   build:
     runs-on: ubuntu-latest  # Máquina virtual de GitHub
+    defaults:
+      run:
+        working-directory: client
 
     steps:               # Pasos a ejecutar
       - name: Checkout code
