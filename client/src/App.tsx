@@ -27,8 +27,9 @@ export default function App(): JSX.Element {
     setLoading(true)
     try {
       const res = await fetch(`${API}/items`)
-      const data = await res.json()
-      setItems(data)
+      const results = await res.json()
+      console.log(results)
+      setItems(results.data)
     } catch (err) {
       console.error(err)
     } finally {
